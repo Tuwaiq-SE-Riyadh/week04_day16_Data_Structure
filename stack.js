@@ -1,16 +1,16 @@
-class queue {
+class stack {
 
     constructor(){
-        this.data = [10,20,30,40,50];
+        this.data = [];
     }
 
-    enqueue(element)
+    push(element)
     {
-        this.data.unshift(element)
+        this.data.push(element)
         // console.log(this.data)
     }
 
-    dequeue()
+    pop()
     {
         this.data.pop()
     }
@@ -23,7 +23,7 @@ class queue {
     }
 }
 
-let obj1 = new queue()
+let obj2 = new stack()
 
 
 
