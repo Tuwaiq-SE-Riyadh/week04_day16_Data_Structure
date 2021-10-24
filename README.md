@@ -19,53 +19,34 @@ Implement a stack data structure by creating a stack class, and add the followin
 The following JS code will create a tree of numbers
 
 ```
-class Node {
-    constructor(val) {
-      this.val = val;
-      this.right = null;
-      this.left = null;
-    };
-  };
-  
-  class BST {
-    constructor() {
-      this.root = null;
-    };
-    create(val) {
-      const newNode = new Node(val);
-      if (!this.root) {
-        this.root = newNode;
-        return this;
-      };
-      let current = this.root;
-  
-      const addSide = side => {
-        if (!current[side]) {
-          current[side] = newNode;
-          return this;
-        };
-        current = current[side];
-      };
-  
-      while (true) {
-        if (val === current.val) return this;
-        if (val < current.val) addSide('left');
-        else addSide('right');
-      };
-    };
-  };
-  
-  const tree = new BST();
-  tree.create(20);
-  tree.create(14);
-  tree.create(57);
-  tree.create(9);
-  tree.create(19);
-  tree.create(31);
-  tree.create(62);
-  tree.create(3);
-  tree.create(11);
-  tree.create(72);
-  ```
-  write a function that traverse this tree and print its elements.
+function Node(value) {
+
+    this.value = value;
+    this.children = [];
+    this.parent = null;
+}
+
+// Create elements
+const root = new Node(0)
+
+const child1  = root.children.push(new Node(1))
+child1.parent = root
+
+const child2  = root.children.push(new Node(2))
+child2.parent = root
+
+const child3  = root.children.push(new Node(3))
+child3.parent = root
+
+const child11  = child1.children.push(new Node(11))
+child11.parent = child1    
+
+const child12  = child1.children.push(new Node(12))
+child12.parent = child1
+
+const child31  = child3.children.push(new Node(31))
+child31.parent = child3  
+```
+
+write a function that takes a root object, and use this root to traverse the tree and print its elements.
   
