@@ -10,14 +10,15 @@ let queuePrint = () => {
         console.log(element);
     });
 }
-/*
+
 queueAddItem(2);
 queueAddItem(5);
 queueAddItem(1);
 queuePrint();
 queueRemoveItem();
 queuePrint();
-*/
+
+
 /* Stack ( Last In First Out ) */
 
 let stack = [];
@@ -31,14 +32,15 @@ let stackPrint = () => {
         console.log(element);
     });
 }
-/*
+
 stackAddItem(2);
 stackAddItem(5);
 stackAddItem(1);
 stackPrint();
 stackRemoveItem();
 stackPrint();
-*/
+
+
 /* Tree */
 
 function Node(value) {
@@ -79,4 +81,4 @@ let traverseTree = () =>{
     });
 }
 
-traverseTree()
+traverseTree();
