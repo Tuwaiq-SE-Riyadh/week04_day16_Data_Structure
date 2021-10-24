@@ -68,7 +68,7 @@ child3.children.push(child31);
 
 const recursion = (root) => {
     root.children.forEach(child => {
-        if(child.length >= 1) recursion(child);
+        if(child.children.length >= 1) recursion(child);
         console.log(child.value);
     });
 };
