@@ -113,24 +113,38 @@ const child31  = new Node(31)
 child3.children.push(child31)
 
 
+function traverse(root){
 
-console.log(root)
+    console.log(root.value)
 
-function traverse(root) {
-     
-for(let i=0; i< root.children.length; i++){
-
-    for(let j=0; j< root.children[i].children.length; j++ ){
-
-        console.log("children => " + root.children[i].children[j].value)
+    for(let i=0; i< root.children.length; i++){
+        traverse(root.children[i])
     }
-
-    console.log( "root => " + root.children[i].value)
-}
-    console.log("root => " + root.value)
 }
 
 traverse(root)
+
+
+// console.log(root)
+
+// function traverse(root) {
+     
+// for(let i=0; i< root.children.length; i++){
+
+//     for(let j=0; j< root.children[i].children.length; j++ ){
+
+//         console.log("children => " + root.children[i].children[j].value)
+//     }
+
+//     console.log( "root => " + root.children[i].value)
+// }
+//     console.log("root => " + root.value)
+// }
+
+// traverse(root)
+
+
+
 
 
 
