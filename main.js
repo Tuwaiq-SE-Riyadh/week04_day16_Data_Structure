@@ -109,3 +109,84 @@ s1.push(4)
 s1.pop()
 console.log("the stack is: ");
 s1.traverse()
+
+
+
+
+
+// ## Tree (BONUS)
+
+// The following JS code will create a tree of numbers
+
+// ```
+// function Node(value) {
+
+//     this.value = value;
+//     this.children = [];
+// }
+
+// // Create elements
+// const root = new Node(0)
+
+// const child1 = new Node(1)
+// root.children.push(child1)
+
+// const child2 = new Node(2)
+// root.children.push(child2)
+
+// const child3 = new Node(3)
+// root.children.push(child3)
+
+// const child11 = new Node(11)
+// child1.children.push(child11)
+
+// const child12 = new Node(12)
+// child1.children.push(child12)
+
+// const child31  = new Node(31)
+// child3.children.push(child31)
+// ```
+console.log("Tree Section");
+function Node(value) {
+
+    this.value = value;
+    this.children = [];
+}
+
+// Create elements
+const root = new Node(0)
+
+const child1 = new Node(1)
+root.children.push(child1)
+
+const child2 = new Node(2)
+root.children.push(child2)
+
+const child3 = new Node(3)
+root.children.push(child3)
+
+const child11 = new Node(11)
+child1.children.push(child11)
+
+const child12 = new Node(12)
+child1.children.push(child12)
+
+const child31  = new Node(31)
+child3.children.push(child31)
+// write a function that takes a root object, and use this root to traverse the tree and print its elements.
+  
+// <i>Hint: read about recursion<i>
+
+// console.log(root);
+function traverse(obj) {
+    if (obj == null) {
+        return
+    }
+    console.log(obj.value);
+    // let size = obj.children.length
+    // console.log(size);
+    for (let i = 0; i < obj.children.length; i++) {
+        traverse(obj.children[i])
+    }
+}
+traverse(root)
