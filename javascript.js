@@ -1,97 +1,53 @@
-// class Queue{
-//     constructor(head){
-//         this.head = head;
-//     }
 
-//     dequeue(){
+class Stack{
+     array =[];
+     push(x){
+         this.array.push(x);
+     }
+     pop(){
+         this.array.pop();
+     }
+     traverse(){
+         for(let i=0; i<this.array.length; i++){
+             console.log(this.array[i]);
+         }
+     }
+}
 
-//         let count = 0; 
-//     let node = this.head;
-//     let x = size()-1;
-//     while (x > 0) {
-        
-//         node = node.next
-//         if(x ==1 ){
-//             node.next= null;
-//         }
-//     }}
+const stack = new Stack;
+stack.push(10);
+stack.push(17);
+stack.push(15);
+stack.push(13);
+stack.push(12);
+stack.pop();
+stack.traverse();
+//-----------------------------------------------------------------------------
+class Queue{
+    array =[];
 
+    enqueue(x){
+        this.array.push(x);
+    }
+    dequeue(){
+        this.array.shift();
+    }
+    traverse(){
+        for(let i=0; i<this.array.length; i++){
+            console.log(this.array[i]);
+        }
+    }
 
-//     enqueue(x){
-       
-//     let node = this.head;
-    
-//     while (node.next !== null ) {   
-//         node = node.next
-//     }
-//     node.next=x;
-//     }
-//     size() {
-//         let count = 0; 
-//         let node = this.head;
-//         while (node) {
-//             count++;
-//             node = node.next
-//         }
-//         return count;
-//     }
-// }
+}
 
-// class ListNode{
-//     constructor(node){
-//         this.node = node;
-//         this.next = null;
-//     }
-// }
-// class Stack{
-//      array =[];
-//      push(x){
-//          this.array.push(x);
-//      }
-//      pop(){
-//          this.array.pop();
-//      }
-//      traverse(){
-//          for(let i=0; i<this.array.length; i++){
-//              console.log(this.array[i]);
-//          }
-//      }
-// }
-
-// const stack = new Stack;
-// stack.push(10);
-// stack.push(17);
-// stack.push(15);
-// stack.push(13);
-// stack.push(12);
-// stack.pop();
-// stack.traverse();
-// //-----------------------------------------------------------------------------
-// class Queue{
-//     array =[];
-
-//     enqueue(x){
-//         this.array.push(x);
-//     }
-//     dequeue(){
-//         this.array.shift();
-//     }
-//     traverse(){
-//         for(let i=0; i<this.array.length; i++){
-//             console.log(this.array[i]);
-//         }
-//     }
-
-// }
-
-// const queue = new Queue;
-// queue.enqueue(15);
-// queue.enqueue(35);
-// queue.enqueue(25);
-// queue.enqueue(45);
-// queue.enqueue(75);
-// queue.dequeue();
-// queue.traverse();
+const queue = new Queue;
+queue.enqueue(15);
+queue.enqueue(35);
+queue.enqueue(25);
+queue.enqueue(45);
+queue.enqueue(75);
+queue.dequeue();
+queue.traverse();
 //-------------------------------------------------------------------------------------
 function Node(value) {
 
