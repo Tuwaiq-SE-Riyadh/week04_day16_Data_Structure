@@ -118,15 +118,19 @@ const child31  = new Node(31)
 child3.children.push(child31)
 
 function node(root) {
+    if(root==null){
+        return
+    }
     
    
     console.log(root.value)
-    }
+    
     //  frist print root;
     // then go for loop print 
     for (var i = 0; i < root.children.length; i++) {
       
      
-        node(children[i]);
+        node(root.children[i]);
         
     }
+}
